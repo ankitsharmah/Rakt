@@ -16,7 +16,7 @@ import BloodBankHomePage from './components/BloodBankHomPage'
 function App() {
   const [bloodBanks, setBloodBanks] = useState([]);
   const [selectedBank, setSelectedBank] = useState(null);
-
+  // const 
   useEffect(() => {
     const fetchBloodBanks = async () => {
       try {
