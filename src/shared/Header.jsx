@@ -47,7 +47,7 @@ const Header = () => {
   }, [showScroll]);
 
   return (
-    <div className="bg-red-100 p-3 sticky top-0 z-30 shadow-md flex items-center justify-between">
+    <div className="bg-red-100 p-3 sticky top-0 z-50 shadow-md h-[10vh] flex items-center justify-between">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <img src={bb} alt="Rakt Logo" className="h-[3.2rem]" />

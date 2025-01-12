@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../main";
+import axios from "axios";
 
-export const BloodBankList = ({ bloodBanks, onSelect, isLoading }) => {
+export const BloodBankList = ({   }) => {
   const navigate = useNavigate();
+    const[bloodBanks,setBloodBank] = useState(null);
+    const[isLoading,setLoading] = useState(true);
 
   const onSelectHandler = (id) => {
     navigate(`/blood-bank/${id}`);
   };
+
+  useEffect(() => {
+    const fetchBloodBanks = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}/api/v1/blood-bank/banks`); // Replace with actual API endpoint
+        setBloodBank(response.data.banks);
+        setLoading(false)
+      } catch (error) {
+        console.error("Error fetching blood banks:", error);
+      }
+    };
+
+    fetchBloodBanks();
+  }, []);
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-200 min-h-screen p-6">

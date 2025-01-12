@@ -17,18 +17,7 @@ function App() {
   const [bloodBanks, setBloodBanks] = useState([]);
   const [selectedBank, setSelectedBank] = useState(null);
   // const 
-  useEffect(() => {
-    const fetchBloodBanks = async () => {
-      try {
-        const response = await axios.get(`${BASE_URL}/api/v1/blood-bank/banks`); // Replace with actual API endpoint
-        setBloodBanks(response.data.banks);
-      } catch (error) {
-        console.error("Error fetching blood banks:", error);
-      }
-    };
-
-    fetchBloodBanks();
-  }, []);
+ 
   const userData = {
     _id: "677e93cd95df1c05fd6cc9c4",
     fullName: "John Doe",

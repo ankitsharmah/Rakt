@@ -2,16 +2,20 @@ import React from 'react'
 import { useState } from 'react'
 
 import viteLogo from '/vite.svg'
+import AutoDynamicPlaceholderWithTailwind from "./DynamicPlaceholderInput";
 
 import { FaBell, FaCalendarAlt, FaEnvelope, FaHandHoldingHeart, FaHeart, FaHospital, FaMapMarkerAlt, FaPhoneAlt, FaPlusCircle, FaRegHeart, FaSearch, FaTint, FaUser, FaUserPlus } from 'react-icons/fa'
 import { BiDonateBlood } from 'react-icons/bi'
 const Home = () => {
   return (
     <div>
-        
+
        <div className="bg-gray-100 h-screen flex flex-col items-center justify-start max-w-7xl mx-auto space-y-5 pb-20 pt-10">
     <div className="w-11/12 bg-white rounded-2xl shadow-lg p-5 text-center">
-      <h1 className="text-xl font-bold text-red-500">Blood Bank</h1>
+
+      <h1 className="text-xl font-bold text-red-500 mb-3">Blood Bank</h1>
+ <AutoDynamicPlaceholderWithTailwind />
+
       <div className="flex justify-around mt-4">
         <div className="text-center">
           <p className="text-4xl font-bold text-black">33</p>
