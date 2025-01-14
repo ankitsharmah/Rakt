@@ -37,14 +37,14 @@ export const BloodBankDetails = () => {
 
       <NavLink
         to={"/blood-banks"}
-        className={"mb-4 bg-red-600 text-white px-4 py-2 rounded"}
+        className={" bg-red-600 text-white px-4 py-2 rounded"}
       >
         Back to List
       </NavLink>
 
       {loading ? (
         // Shimmer Effect Placeholder
-        <div className="bg-white p-8 rounded-lg shadow-lg animate-pulse">
+        <div className="bg-white p-8 mt-2 rounded-lg shadow-lg animate-pulse">
           <div className="h-8 bg-gray-300 rounded mb-4 w-1/3"></div>
           <div className="h-6 bg-gray-200 rounded mb-2 w-2/3"></div>
           <div className="h-6 bg-gray-200 rounded mb-2 w-1/2"></div>
@@ -86,23 +86,14 @@ export const BloodBankDetails = () => {
             ))}
           </ul>
           <div className="mt-6">
-            <label
-              htmlFor="requestType"
-              className="block font-medium text-gray-700 mb-2"
-            >
-              Select Request Type:
-            </label>
-            <select
-              id="requestType"
-              value={requestType}
-              onChange={handleTypeChange}
-              className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 p-2"
-            >
-              <option value="Whole Blood">Whole Blood</option>
-              <option value="RBC">RBC</option>
-              <option value="Plasma">Plasma</option>
-              <option value="Platelets">Platelets</option>
-            </select>
+      
+        
+           <NavLink
+        to={"/request"}
+        className={"mb-4 bg-red-600 text-white px-4 py-2 rounded"}
+      >
+        request blood
+      </NavLink>
           </div>
         </div>
       )}

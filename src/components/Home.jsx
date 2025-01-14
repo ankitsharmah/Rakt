@@ -6,7 +6,9 @@ import AutoDynamicPlaceholderWithTailwind from "./DynamicPlaceholderInput";
 
 import { FaBell, FaCalendarAlt, FaEnvelope, FaHandHoldingHeart, FaHeart, FaHospital, FaMapMarkerAlt, FaPhoneAlt, FaPlusCircle, FaRegHeart, FaSearch, FaTint, FaUser, FaUserPlus } from 'react-icons/fa'
 import { BiDonateBlood } from 'react-icons/bi'
+import { useNavigate } from 'react-router-dom';
 const Home = () => {
+    const navigate = useNavigate();
   return (
     <div>
 
@@ -37,7 +39,7 @@ const Home = () => {
         <FaRegHeart size={20} />
         <span>Register as Donor</span>
       </button>
-      <button className="w-full bg-red-500 text-white py-2 rounded-lg text-lg font-bold flex items-center justify-center space-x-2 mb-4">
+      <button onClick={()=>{navigate("/blood-banks")}} className="w-full bg-red-500 text-white py-2 rounded-lg text-lg font-bold flex items-center justify-center space-x-2 mb-4">
         <FaSearch size={20} />
         <span>Request Blood</span>
       </button>
@@ -99,7 +101,7 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="w-11/12 bg-white rounded-2xl shadow-lg p-5 text-center">
+    <div className="w-11/12 bg-white rounded-2xl shadow-lg p-5 mb-7 text-center">
       <h2 className="text-lg font-bold text-red-500">Contact Us</h2>
       <div className="mt-4 space-y-3">
         <div className="flex items-center space-x-2">
