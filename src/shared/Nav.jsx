@@ -13,7 +13,7 @@ const Nav = () => {
     const navigate = useNavigate();
   return (
     <div>
-       <nav className="fixed bottom-0 w-full bg-white flex justify-around py-3 shadow-md">
+       <nav className="fixed bottom-0 w-full bg-white z-50 flex justify-around py-3 shadow-md">
           <button className="flex flex-col items-center text-red-500" onClick={()=>{
             navigate("/home")
           }}>

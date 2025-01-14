@@ -12,6 +12,10 @@ import { BloodBankDetails } from './components/BloodBankDetails'
 import Camps from './components/Camps'
 import { BASE_URL } from './main'
 import BloodBankHomePage from './components/BloodBankHomPage'
+import BloodRequestForm from './components/BloodRequestForm'
+import SignupPage from './components/SignupPage'
+// import Otp from './components/Otp'
+import { VerifyEmail } from './components/VerifyEmail'
 
 function App() {
   const [bloodBanks, setBloodBanks] = useState([]);
@@ -40,7 +44,9 @@ function App() {
     <Routes>
       <Route path='/' element={<BloodBankHomePage />}/>
       <Route path='/home' element={<Home />}/>
-      <Route path='/request' element={<AddRequest/>}/>
+      <Route path='/signup' element={<SignupPage />}/>
+      <Route path='/verify' element={<VerifyEmail />}/>
+      <Route path='/request' element={<BloodRequestForm/>}/>
       <Route path='/profile' element={<UserDetails user={userData} />}/>
       <Route path='/camps' element={<Camps/>}/>
       <Route path='/blood-banks' element={<BloodBankList  bloodBanks={bloodBanks}/>}/>
