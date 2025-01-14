@@ -60,8 +60,8 @@ const dispatch = useDispatch()
   };
 
   return (
-    <div className="min-h-[90vh] bg-red-50 flex flex-col items-center justify-center px-4">
-      <h1 className="text-3xl font-bold text-red-600 mb-6 mt-1">Sign Up</h1>
+    <div className="min-h-[90vh] bg-red-50 flex flex-col items-center  px-4">
+      <h1 className="text-3xl font-bold text-red-600 mb-6 mt-3">Sign Up</h1>
       <form
         onSubmit={handleSubmit}
         className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg"
@@ -80,7 +80,7 @@ const dispatch = useDispatch()
               id="fullName"
               value={formData.fullName}
               onChange={handleChange}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+              className="mt-1 p-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
               required
             />
           </div>
@@ -98,7 +98,7 @@ const dispatch = useDispatch()
               id="email"
               value={formData.email}
               onChange={handleChange}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+              className="mt-1 block w-full p-1 border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
               required
             />
           </div>
@@ -116,7 +116,7 @@ const dispatch = useDispatch()
               id="password"
               value={formData.password}
               onChange={handleChange}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+              className="mt-1 block w-full border-gray-300 p-1 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
               required
             />
           </div>
@@ -154,7 +154,7 @@ const dispatch = useDispatch()
               id="bloodGroup"
               value={formData.bloodGroup}
               onChange={handleChange}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+              className="mt-1 block w-full p-1 border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
               required
             >
               <option value="">Select Blood Group</option>
@@ -182,7 +182,7 @@ const dispatch = useDispatch()
               id="contact"
               value={formData.contact}
               onChange={handleChange}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+              className="mt-1 block w-full p-1 border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
               required
             />
           </div>
@@ -218,7 +218,7 @@ const dispatch = useDispatch()
               id="lastDonationDate"
               value={formData.lastDonationDate}
               onChange={handleChange}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
+              className="mt-1 block w-full p-1 border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm"
               required
             />
           </div>
